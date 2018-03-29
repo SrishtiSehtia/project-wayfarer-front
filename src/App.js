@@ -15,6 +15,7 @@ import './App.css';
 import Header from './components/Header';
 import CityList from './components/CityList';
 import CityView from './components/CityView';
+import HomePage from './components/HomePage';
 
 import CitiesContainer from './containers/CitiesContainer'
 
@@ -58,6 +59,10 @@ class App extends Component {
               <Route
                 exact path={routes.CITIES}
                 component={() => <CitiesContainer cities={cities}/>}
+              />
+              <Route
+                exact path={routes.HOMEPAGE}
+                component={() => <HomePage />}
               />
           </div>
           {/* <div className="App">
