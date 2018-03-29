@@ -7,7 +7,7 @@ import * as routes from '../constants/routes';
 
 const SignInPage = ({ history }) =>
   <div>
-    <h1>SignIn</h1>
+    <h1>Sign In</h1>
     <SignInForm history={history} />
     <SignUpLink />
   </div>
@@ -42,7 +42,7 @@ class SignInForm extends Component {
     auth.doSignInWithEmailAndPassword(email, password)
       .then(() => {
         this.setState(() => ({ ...INITIAL_STATE }));
-        history.push(routes.PROFILE);
+        history.push(routes.CITIES);
       })
       .catch(error => {
         this.setState(byPropKey('error', error));

@@ -42,7 +42,7 @@ class App extends Component {
         <Router>
           <div>
             <Navigation />
-              <hr/>
+    
               <Route
               exact path={routes.SIGN_UP}
               component={() => <SignUpPage />}
