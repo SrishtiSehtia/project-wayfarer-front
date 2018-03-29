@@ -21,23 +21,28 @@ Navigation.contextTypes = {
 };
 
 const NavigationAuth = () =>
-    <ul>
+  <div id="signIn">
+  <h1 id="title">Wayfarer</h1>
+    <ul id="authNav">
       <li><Link to={routes.HOME}>Home</Link></li>
       <li><Link to={routes.ACCOUNT}>Account</Link></li>
       <li><Link to={routes.PROFILE}>Profile</Link></li>
       <li><SignOutButton /></li>
     </ul>
+    </div>
 
 const NavigationNonAuth = () =>
-    <div>
-      <Modal className="modalSignIn"
-      trigger={<Button waves='light'>Sign In!</Button>}>
-      <SignInForm />
-      </Modal>
-      <Modal className="modalSignUp"
-      trigger={<Button waves='light'>Sign Up!</Button>}>
-      <SignUpForm />
-      </Modal>
-    </div>
+      <div id="signIn">
+      <h1 id="title">Wayfarer</h1>
+
+        <Modal className="modalSignIn"
+        trigger={<Button waves='light'>SignIn</Button>}>
+        <SignInForm />
+        </Modal>
+        <Modal className="modalSignUp"
+        trigger={<Button waves='light'>SignUp</Button>}>
+        <SignUpForm />
+        </Modal>
+      </div>
 
 export default Navigation;

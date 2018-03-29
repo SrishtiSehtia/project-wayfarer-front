@@ -8,7 +8,7 @@ class CityList extends Component {
     })
     return (
       <div id='citylist' class="col s12 m4 l3">
-          <h2>Cities</h2>
+          <h4>Cities</h4>
           {cityArray}
       </div>
     );
