@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';
 import CityList from './components/CityList';
+import CityView from './components/CityView';
 
 
 class App extends Component {
@@ -24,7 +25,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <CityList cities={cities}/>
+        <div class="row">
+          <CityList cities={cities}/>
+          <CityView />
+        </div>
       </div>
     );
   }

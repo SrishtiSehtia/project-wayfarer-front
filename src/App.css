@@ -2,3 +2,11 @@ body nav {
   padding: 0 35px;
   background-color: #f9c6ce;
 }
+
+#citylist {
+  background-color: #8d678d;
+}
+
+.city {
+  background-color: #97cdcd
+}
