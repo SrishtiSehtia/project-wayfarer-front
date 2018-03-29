@@ -1,21 +1,41 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Navigation from './components/Navigation';
+
+import SignUpPage from './components/SignUp'
+import SignInPage from './components/SignIn'
+import ProfilePage from './components/Profile'
+
+import { firebase } from './firebase';
+import withAuthentication from './components/withAuthentication';
+
+
+import * as routes from './constants/routes';
 
 class App extends Component {
+ 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <Router>
+          <div>
+            <Navigation />
+              <hr/>
+              <Route
+              exact path={routes.SIGN_UP}
+              component={() => <SignUpPage />}
+              />
+              <Route
+              exact path={routes.SIGN_IN}
+              component={() => <SignInPage />}
+              />
+              <Route
+              exact path={routes.PROFILE}
+              component={() => <ProfilePage />}
+              />
+          </div>
+        </Router>
     );
   }
 }
 
-export default App;
+export default withAuthentication(App);
