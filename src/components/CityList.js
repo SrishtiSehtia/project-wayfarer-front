@@ -3,6 +3,9 @@ import City from './City';
 
 class CityList extends Component {
   render() {
+    const cityArray = this.props.cities.map((city, key) => {
+      return <City name={city.name} country={city.country} key={key} />
+    })
     return (
       <div class="row">
 
@@ -14,7 +17,7 @@ class CityList extends Component {
           3-columns-wide on large screens,
           4-columns-wide on medium screens,
           12-columns-wide on small screens  --> */}
-          <City />
+          {cityArray}
       </div>
       </div>
     );
