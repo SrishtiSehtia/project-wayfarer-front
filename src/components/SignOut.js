@@ -10,4 +10,6 @@ const SignOutButton = () =>
     Sign Out
   </button>
 
+  
+
 export default SignOutButton;

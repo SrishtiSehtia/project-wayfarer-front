@@ -11,7 +11,12 @@ auth.signInWithEmailAndPassword(email,password);
 
 //sign out
 export const doSignOut = () =>
-auth.signOut();
+// auth.signOut();
+auth.signOut().then(() => {
+    // We need to refresh otherwise redirect state is
+    // persisted
+    window.location = window.location.origin;
+  });
 
 //password reset
 export const doPasswordReset = (email) =>
@@ -20,4 +25,3 @@ auth.sendPasswordResetEmail(email);
 //password change
 export const doPasswordUpdate = (password) =>
 auth.currentUser.updatePassword(password);
-

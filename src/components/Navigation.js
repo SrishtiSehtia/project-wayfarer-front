@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-
+import SignInForm from './SignIn'
 import SignOutButton from './SignOut'
+import SignUpForm from './SignUp'
 import ProfilePage from './Profile'
 import * as routes from '../constants/routes';
+import {Button, Icon, Modal} from 'react-materialize'
 
 const Navigation = (props, {authUser}) =>
   <div>
@@ -12,7 +14,7 @@ const Navigation = (props, {authUser}) =>
       ? <NavigationAuth/>
       : <NavigationNonAuth />
     }
-  </div> 
+  </div>
 
 Navigation.contextTypes = {
   authUser: PropTypes.object,
@@ -27,9 +29,15 @@ const NavigationAuth = () =>
     </ul>
 
 const NavigationNonAuth = () =>
-    <ul>
-      <li><Link to={routes.SIGN_IN}>Sign In</Link></li>
-      <li><Link to={routes.SIGN_UP}>Sign Up</Link></li>
-    </ul>
+    <div>
+      <Modal className="modalSignIn"
+      trigger={<Button waves='light'>Sign In!</Button>}>
+      <SignInForm />
+      </Modal>
+      <Modal className="modalSignUp"
+      trigger={<Button waves='light'>Sign Up!</Button>}>
+      <SignUpForm />
+      </Modal>
+    </div>
 
 export default Navigation;
