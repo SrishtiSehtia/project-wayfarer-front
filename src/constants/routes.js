@@ -4,3 +4,4 @@ export const PROFILE = '/profile';
 export const HOME = '/';
 export const ACCOUNT = '/account';
 export const PASSWORD_FORGET = '/pw-forget';
+export const CITIES = '/cities';

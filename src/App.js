@@ -11,10 +11,31 @@ import withAuthentication from './components/withAuthentication';
 
 
 import * as routes from './constants/routes';
+import './App.css';
+import Header from './components/Header';
+import CityList from './components/CityList';
+import CityView from './components/CityView';
+
+
 
 class App extends Component {
- 
+
   render() {
+    const cities = [
+      {
+        name: 'San Francisco',
+        country: 'USA'
+      },
+      {
+        name: 'Los Angeles',
+        country: 'USA'
+      },
+      {
+        name: 'New Delhi',
+        country: 'India'
+      }
+    ]
+
     return (
         <Router>
           <div>
@@ -32,8 +53,17 @@ class App extends Component {
               exact path={routes.PROFILE}
               component={() => <ProfilePage />}
               />
+              <Route
+                exact path={routes.CITIES}
+                component={() => <CitiesContainer />}
+              />
           </div>
+          {/* <div className="App">
+            <Header />
+
+          </div> */}
         </Router>
+
     );
   }
 }
