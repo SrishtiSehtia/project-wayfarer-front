@@ -39,6 +39,21 @@ class App extends Component {
       }
     ]
 
+    const posts = [
+      {
+        title: 'Post1',
+        description: 'This is the description for Post 1'
+      },
+      {
+        title: 'Post2',
+        description: 'lorem lorem lorem lorem lorem lorem lorem'
+      },
+      {
+        title: 'post3',
+        description: 'YOOOO THIS CITY IS LITTTTTTTTTTT'
+      }
+    ]
+
     return (
         <Router>
           <div>
@@ -58,7 +73,7 @@ class App extends Component {
               />
               <Route
                 exact path={routes.CITIES}
-                component={() => <CitiesContainer cities={cities}/>}
+                component={() => <CitiesContainer cities={cities} posts={posts}/>}
               />
               <Route
                 exact path={routes.HOMEPAGE}

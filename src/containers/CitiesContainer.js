@@ -7,7 +7,7 @@ class CitiesContainer extends Component {
     return (
       <div class="row">
         <CityList cities={this.props.cities}/>
-        <CityView />
+        <CityView posts={this.props.posts}/>
       </div>
     );
   }

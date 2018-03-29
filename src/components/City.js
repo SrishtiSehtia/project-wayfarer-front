@@ -7,7 +7,6 @@ class City extends Component {
       <div className='city' key={this.props.key}>
         <h3>{this.props.name}</h3>
         <h4>{this.props.country}</h4>
-
       </div>
     );
   }
