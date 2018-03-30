@@ -8,7 +8,7 @@ class PostList extends Component {
     })
     return (
       <div>
-        <h2>Posts</h2>
+        <h4 id="postListTitle">Posts</h4><img id="cityPic" src="../images/city.png" alt='city' />
         {postArray}
       </div>
     );
