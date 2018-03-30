@@ -6,7 +6,7 @@ class CityView extends Component {
   render(){
     return (
       <div class="col s12 m8 l9">
-        <h2>CITYVIEW</h2>
+        <h2>City View</h2>
         <PostList posts={this.props.posts}/>
       </div>
     );

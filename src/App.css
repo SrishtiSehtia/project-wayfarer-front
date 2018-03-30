@@ -3,12 +3,79 @@ body nav {
   background-color: #f9c6ce;
 }
 
+h4, h2, h1{
+font-family: 'Pacifico', cursive;
+}
+
+h4, h2{
+  text-align: center;
+}
+
+body {
+  color: #423D34;
+  font-family: 'Rubik', sans-serif;
+}
+
 #citylist {
-  background-color: #8d678d;
+  /* background-color: #8d678d; */
 }
 
 .city {
-  background-color: #97cdcd
+  background-color: #BBAD93;
+  border-radius: 1em;
+  padding: .5em .5em;
+  margin-bottom: .8em;
+}
+#authNav {
+  display: flex;
+  flex-direction: row;
+}
+
+#authNav li a{
+  margin-right: 1.5em;
+  color: white;
+  text-transform: uppercase;
+}
+
+.city {
+  text-align: center;
+}
+
+/* Sign-In/Sign-Out Nav */
+#signIn{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #45BFD1;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  margin-bottom: 0em;
+}
+  #signIn Button{
+  margin-right: 2em;
+  background-color: white;
+  color: #45BFD1;
+  font-weight: 800;
+  width: auto;
+}
+#title{
+  color: white;
+  display: block;
+  width: 100%;
+  /* padding-top: em; */
+  margin-left: .5em;
+}
+
+form Button{
+  border-radius: 1em;
+  margin-top: .8em ;
+  margin-bottom: .8em ;
+  background-color: #45BFD1;
+  color: white;
+  padding: .5em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 #sunset {

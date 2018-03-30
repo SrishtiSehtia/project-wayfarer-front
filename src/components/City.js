@@ -5,8 +5,8 @@ class City extends Component {
   render() {
     return (
       <div className='city' key={this.props.key}>
-        <h3>{this.props.name}</h3>
-        <h4>{this.props.country}</h4>
+        <h5>{this.props.name}</h5>
+        <h6>{this.props.country}</h6>
       </div>
     );
   }
