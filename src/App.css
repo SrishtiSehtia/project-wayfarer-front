@@ -15,6 +15,12 @@ body {
   color: #423D34;
   font-family: 'Rubik', sans-serif;
 }
+#homepageImg {
+  margin-top: -3em;
+  margin-bottom: -3em;
+  position: relative;
+  z-index: -1;
+}
 
 #citylist {
   /* background-color: #8d678d; */
@@ -25,7 +31,17 @@ body {
   border-radius: 1em;
   padding: .5em .5em;
   margin-bottom: .8em;
+  display: flex;
+  flex-direction: row;
 }
+
+#thumbnailLeft{
+  height: 30%;
+  width: 30%;
+  border-radius: .4em;
+  margin-right: .5em;
+}
+
 #authNav {
   display: flex;
   flex-direction: row;
@@ -81,4 +97,45 @@ form Button{
 #sunset {
   max-width: 100%;
   padding-bottom: 3em;
+}
+#cityPic {
+  width: 50%;
+  display: inline-block;
+  margin-bottom: -1.5em;
+}
+
+#postWrap{
+  background-color: #FFF4DA;
+  border-radius: .8em;
+  padding: .5em 1.61em;
+  width: 85%;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: row;
+}
+
+#eachPost{
+  width: 80%;
+  padding: 0em 0em;
+}
+
+#thumbnail{
+  width: 20%;
+  height: 25%;
+  border: .2em solid #BBAD93;
+  border-radius: .4em;
+  margin-right: 1.61em;
+}
+
+#postListTitle{
+  margin-left: 2em;
+  text-align: left;
+  display: inline-block;
+}
+#postTitle{
+  font-size: 2em;
+  color: #BBAD93;
+  font-family: 'Pacifico', cursive;
+  padding-top: 0em;
+  margin-bottom: 0em;
 }

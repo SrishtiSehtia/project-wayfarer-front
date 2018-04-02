@@ -4,10 +4,9 @@ class HomePage extends Component {
   render(){
     return (
       <div>
-        <h2>HOMEPAGE</h2>
-        <img id='sunset'src="https://images.unsplash.com/photo-1512930366077-deb21fed7bc4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=79cf09e2a06efb0b3cf5344e638bbe94&auto=format&fit=crop&w=1814&q=80" alt='water' />
-
-        <div class="row container">
+        <h2 id="homeH">Find your city...</h2>
+        <center><img id='homepageImg'src="../images/city.gif" alt='water' /></center>
+        <div class="row container" id="homeDes">
 
           <div class="center-align col s4">
             <i class="fa fa-bolt fa-4x"></i>
