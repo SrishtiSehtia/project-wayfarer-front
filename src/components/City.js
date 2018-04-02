@@ -2,9 +2,20 @@ import React, { Component } from 'react';
 
 
 class City extends Component {
+
+  constructor(){
+    super()
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick(){
+  //  var y = this.props.populateCityView()
+    var x = this.props.city;
+    this.props.populateCityView(this.props.city)
+  }
   render() {
     return (
-      <div className='city' key={this.props.key}>
+      <div className='city' onClick={this.handleClick} key={this.props.key}>
         <img id="thumbnailLeft" src="../images/thumbnail.jpg" alt='thumbnail' />
         <section>
           <h5>{this.props.name}</h5>
