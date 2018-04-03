@@ -47,12 +47,12 @@ class SignUpForm extends Component {
 
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
-        //this.setState(() => ({ ...INITIAL_STATE }));
+        // this.setState(() => ({ ...INITIAL_STATE }));
         let newUser = {
           email: email,
           password: passwordOne
         }
-        axios.post('http://localhost:5000/api/users', newUser).then((res) => {
+        axios.post('http://localhost:5000/api/users').then((res) => {
           console.log(res);
           
         })

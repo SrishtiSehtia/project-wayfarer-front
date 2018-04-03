@@ -139,3 +139,22 @@ form Button{
   padding-top: 0em;
   margin-bottom: 0em;
 }
+
+ #profilePage img{
+  width: 15em;
+  height: 13em;
+  margin-right: 2em;
+}
+
+#profileWrap {
+  display: flex;
+  flex-direction:row;
+  margin-top: 1.61em;
+  justify-content: center;
+}
+
+#profileWrap section{
+    background: #FFBF7F;
+    border-radius: 1.5em;
+    padding: 1.61em 1.61em;
+}

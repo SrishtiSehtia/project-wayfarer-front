@@ -25,7 +25,7 @@ const NavigationAuth = () =>
   <h1 id="title">Wayfarer</h1>
     <ul id="authNav">
       <li><Link to={routes.HOMEPAGE}>Home</Link></li>
-      <li><Link to={routes.ACCOUNT}>Account</Link></li>
+      <li><Link to={routes.CITIES}>Cities</Link></li>
       <li><Link to={routes.PROFILE}>Profile</Link></li>
       <li><SignOutButton /></li>
     </ul>
