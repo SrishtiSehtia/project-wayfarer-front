@@ -4,6 +4,7 @@ import {Button, Icon, Modal} from 'react-materialize'
 import NewPost from './NewPost'
 
 class PostList extends Component {
+
   render() {
     const postArray = this.props.posts.map((post, key) => {
       return <Post title={post.title} description={post.description} key={key} />
@@ -14,7 +15,7 @@ class PostList extends Component {
 
         <Modal className="modalNewPost"
         trigger={<Button waves='light'>New Post</Button>}>
-        <NewPost />
+        <NewPost createPost={this.props.createPost} cityID={this.props.cityID}/>
         </Modal>
 
 
