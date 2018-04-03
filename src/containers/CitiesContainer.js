@@ -4,6 +4,7 @@ import CityView from '../components/CityView';
 import CityModel from '../models/City'
 import PostModel from '../models/Post';
 
+import withAuthorization from '../components/withAuthorization';
 
 class CitiesContainer extends Component {
   constructor() {
@@ -52,4 +53,6 @@ class CitiesContainer extends Component {
   }
 }
 
-export default CitiesContainer;
+const authCondition = (authUser) => !!authUser;
+
+export default withAuthorization(authCondition)(CitiesContainer);
