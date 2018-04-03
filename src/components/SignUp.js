@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import * as routes from '../constants/routes';
 import { auth } from '../firebase'
+import axios from 'axios'
 
 // Sign Up Page
 
@@ -46,7 +47,15 @@ class SignUpForm extends Component {
 
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
-        this.setState(() => ({ ...INITIAL_STATE }));
+        //this.setState(() => ({ ...INITIAL_STATE }));
+        let newUser = {
+          email: email,
+          password: passwordOne
+        }
+        axios.post('http://localhost:5000/api/users', newUser).then((res) => {
+          console.log(res);
+          
+        })
          history.push(routes.PROFILE);
       })
       .catch(error => {
@@ -82,12 +91,14 @@ class SignUpForm extends Component {
         <input
           value={email}
           onChange={event => this.setState(byPropKey('email', event.target.value))}
+          ref="email"
           type="text"
           placeholder="Email Address"
         />
         <input
           value={passwordOne}
           onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
+          ref="password"
           type="password"
           placeholder="Password"
         />
